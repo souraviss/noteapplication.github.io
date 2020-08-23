@@ -1,0 +1,54 @@
+.btn {
+  padding: 10px;
+  line-height: 5px;
+  cursor: pointer;
+}
+.btn-primary {
+  color: white;
+  background-color: teal;
+}
+.colorbox {
+  margin: 0 auto;
+}
+.AddNote {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.btnSubmit {
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  background-color: green;
+}
+.addnote__form-group {
+  display: flex;
+  flex-direction: column;
+}
+.addnote__form-group input[type="file"] {
+  padding: 8px;
+  color: white;
+  background-color: thistle;
+  margin-bottom: 2em;
+}
+
+.addnote__form-group label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+
+.addnote__form-group .text-body {
+  line-height: 2em;
+  padding: 0 10px;
+  height: 200px;
+}
+.addnote__form-group input {
+  padding: 5px;
+}
+.addnote__noteColor {
+  margin-bottom: 20px;
+}

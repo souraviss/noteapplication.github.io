@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import "./App.css";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+import axios from "axios";
 
 function App() {
+  const [notes, setNote] = useState([]);
+  const history = useHistory();
+  let localData = localStorage.getItem("user_token");
+  if (!localData) {
+    history.push("/");
+  }
+  const config = {
+    method: "get",
+    url: "http://15.207.8.251:10051/notesUser",
+    headers: { "auth-token": `${localData}` },
+  };
+  const fetchData = async () => {
+    const response = await axios(config);
+    return response;
+  };
+
+  useEffect(() => {
+    fetchData().then(({ data }) => {
+      setNote(data);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {
+        <Main notes={notes} />
+        //notes.map((note, index) => <Main notes={note} key={index} />)
+      }
+
+      {/* <Footer /> */}
     </div>
   );
 }

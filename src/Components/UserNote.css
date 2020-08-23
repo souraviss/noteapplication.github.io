@@ -1,0 +1,11 @@
+.user_note__notecolor__box {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.user__note {
+}
+.user_note_heading {
+  font-size: 2em;
+}

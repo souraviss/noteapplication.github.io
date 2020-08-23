@@ -1,0 +1,40 @@
+.colorbox {
+  margin: 0 auto;
+}
+.btnUpdate {
+  padding: 10px;
+  color: white;
+  background-color: blue;
+}
+.editNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.edit__form-group {
+  display: flex;
+  line-height: 1em;
+  padding: 10px;
+  flex-direction: column;
+}
+.edit__form-group input {
+  padding: 5px;
+}
+.edit__form-group label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+.edit__form-group input[type="file"] {
+  padding: 8px;
+  color: white;
+  background-color: thistle;
+  margin-bottom: 2em;
+}
+.text-body {
+  line-height: 2em;
+  padding: 0 10px;
+  height: 200px;
+}
